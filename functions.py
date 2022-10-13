@@ -1,77 +1,66 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2580
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
-{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green23\blue23;\red202\green202\blue202;
-\red212\green214\blue154;\red140\green211\blue254;\red212\green212\blue212;\red89\green156\blue62;\red167\green197\blue152;
-\red194\green126\blue101;\red183\green111\blue179;\red113\green184\blue255;\red70\green137\blue204;\red23\green23\blue23;
-\red202\green202\blue202;\red212\green214\blue154;\red140\green211\blue254;\red212\green212\blue212;\red67\green192\blue160;
-\red183\green111\blue179;\red113\green184\blue255;\red194\green126\blue101;\red89\green156\blue62;\red167\green197\blue152;
-}
-{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c11765\c11765;\cssrgb\c83137\c83137\c83137;
-\cssrgb\c86275\c86275\c66667;\cssrgb\c61176\c86275\c99608;\cssrgb\c86275\c86275\c86275;\cssrgb\c41569\c66275\c30980;\cssrgb\c70980\c80784\c65882;
-\cssrgb\c80784\c56863\c47059;\cssrgb\c77255\c52549\c75294;\cssrgb\c50980\c77647\c100000;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c11765\c11765;
-\cssrgb\c83137\c83137\c83137;\cssrgb\c86275\c86275\c66667;\cssrgb\c61176\c86275\c99608;\cssrgb\c86275\c86275\c86275;\cssrgb\c30588\c78824\c69020;
-\cssrgb\c77255\c52549\c75294;\cssrgb\c50980\c77647\c100000;\cssrgb\c80784\c56863\c47059;\cssrgb\c41569\c66275\c30980;\cssrgb\c70980\c80784\c65882;
-}
-\margl1440\margr1440\vieww37900\viewh21300\viewkind0
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red72\green139\blue206;
+\red203\green203\blue202;\red212\green213\blue153;\red142\green213\blue255;\red213\green213\blue212;\red89\green155\blue61;
+\red167\green197\blue151;\red194\green125\blue100;\red184\green111\blue179;\red115\green187\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985;\cssrgb\c34356\c61927\c84546;
+\cssrgb\c83411\c83410\c83098;\cssrgb\c86232\c86185\c66253;\cssrgb\c61728\c86919\c100000;\cssrgb\c86559\c86559\c86235;\cssrgb\c41351\c66031\c30488;
+\cssrgb\c71061\c80852\c65647;\cssrgb\c80764\c56762\c46655;\cssrgb\c77483\c52772\c75312;\cssrgb\c51654\c78438\c100000;}
+\margl1440\margr1440\vieww37900\viewh17980\viewkind0
 \deftab720
 \pard\pardeftab720\sl380\partightenfactor0
 
 \f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 def\cf4 \strokec4  \cf5 \strokec5 forecast_accuracy\cf4 \strokec4 (\cf6 \strokec6 forecast\cf4 \strokec4 , \cf6 \strokec6 actual\cf4 \strokec4 , \cf6 \strokec6 str_name\cf4 \strokec4 )\cf7 \strokec7 :\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\sl380\partightenfactor0
-\cf4 \cb3     mape = np.mean\cf7 \strokec7 (\cf4 \strokec4 np.\cf5 \strokec5 abs\cf7 \strokec7 (\cf4 \strokec4 forecast - actual\cf7 \strokec7 )\cf4 \strokec4 /np.\cf5 \strokec5 abs\cf7 \strokec7 (\cf4 \strokec4 actual\cf7 \strokec7 ))\cf4 \strokec4  \cf8 \strokec8 # MAPE\cf4 \cb1 \strokec4 \
-\cb3     mae = np.mean\cf7 \strokec7 (\cf4 \strokec4 np.\cf5 \strokec5 abs\cf7 \strokec7 (\cf4 \strokec4 forecast - actual\cf7 \strokec7 ))\cf4 \strokec4                  \cf8 \strokec8 # MAE\cf4 \cb1 \strokec4 \
-\cb3     rmse = np.mean\cf7 \strokec7 ((\cf4 \strokec4 forecast - actual\cf7 \strokec7 )\cf4 \strokec4 **\cf9 \strokec9 2\cf7 \strokec7 )\cf4 \strokec4 **\cf9 \strokec9 .5\cf4 \strokec4                \cf8 \strokec8 # RMSE\cf4 \cb1 \strokec4 \
-\cb3     mse = np.mean\cf7 \strokec7 ((\cf4 \strokec4 forecast - actual\cf7 \strokec7 )\cf4 \strokec4 **\cf9 \strokec9 2\cf7 \strokec7 )\cf4 \strokec4                     \cf8 \strokec8 # MSE\cf4 \cb1 \strokec4 \
-\cb3     df_acc = pd.DataFrame\cf7 \strokec7 (\{\cf10 \strokec10 'MAPE'\cf7 \strokec7 :\cf4 \strokec4  \cf7 \strokec7 [\cf4 \strokec4 mape\cf7 \strokec7 ],\cf4 \cb1 \strokec4 \
-\cb3                            \cf10 \strokec10 'MAE'\cf7 \strokec7 :\cf4 \strokec4  \cf7 \strokec7 [\cf4 \strokec4 mae\cf7 \strokec7 ],\cf4 \cb1 \strokec4 \
-\cb3                            \cf10 \strokec10 'RMSE'\cf7 \strokec7 :\cf4 \strokec4  \cf7 \strokec7 [\cf4 \strokec4 rmse\cf7 \strokec7 ],\cf4 \cb1 \strokec4 \
-\cb3                            \cf10 \strokec10 'MSE'\cf7 \strokec7 :\cf4 \strokec4  \cf7 \strokec7 [\cf4 \strokec4 mse\cf7 \strokec7 ],\cf4 \strokec4  \cb1 \
-\cb3                            \cf7 \strokec7 \},\cf4 \cb1 \strokec4 \
-\cb3                           index=\cf7 \strokec7 [\cf4 \strokec4 str_name\cf7 \strokec7 ])\cf4 \cb1 \strokec4 \
-\cb3     \cf11 \strokec11 return\cf4 \strokec4  df_acc\cb1 \
+def\cf2 \cb3  \cf2 \cb3 forecast_accuracy\cf2 \cb3 (\cf2 \cb3 forecast\cf2 \cb3 , \cf2 \cb3 actual\cf2 \cb3 , \cf2 \cb3 str_name\cf2 \cb3 )\cf2 \cb3 :\cf2 \cb3 \
+    mape = np.mean\cf2 \cb3 (\cf2 \cb3 np.\cf2 \cb3 abs\cf2 \cb3 (\cf2 \cb3 forecast - actual\cf2 \cb3 )\cf2 \cb3 /np.\cf2 \cb3 abs\cf2 \cb3 (\cf2 \cb3 actual\cf2 \cb3 ))\cf2 \cb3  \cf2 \cb3 # MAPE\cf2 \cb3 \
+    mae = np.mean\cf2 \cb3 (\cf2 \cb3 np.\cf2 \cb3 abs\cf2 \cb3 (\cf2 \cb3 forecast - actual\cf2 \cb3 ))\cf2 \cb3                  \cf2 \cb3 # MAE\cf2 \cb3 \
+    rmse = np.mean\cf2 \cb3 ((\cf2 \cb3 forecast - actual\cf2 \cb3 )\cf2 \cb3 **\cf2 \cb3 2\cf2 \cb3 )\cf2 \cb3 **\cf2 \cb3 .5\cf2 \cb3                \cf2 \cb3 # RMSE\cf2 \cb3 \
+    mse = np.mean\cf2 \cb3 ((\cf2 \cb3 forecast - actual\cf2 \cb3 )\cf2 \cb3 **\cf2 \cb3 2\cf2 \cb3 )\cf2 \cb3                     \cf2 \cb3 # MSE\cf2 \cb3 \
+    df_acc = pd.DataFrame\cf2 \cb3 (\{\cf2 \cb3 'MAPE'\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 [\cf2 \cb3 mape\cf2 \cb3 ],\cf2 \cb3 \
+                           \cf2 \cb3 'MAE'\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 [\cf2 \cb3 mae\cf2 \cb3 ],\cf2 \cb3 \
+                           \cf2 \cb3 'RMSE'\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 [\cf2 \cb3 rmse\cf2 \cb3 ],\cf2 \cb3 \
+                           \cf2 \cb3 'MSE'\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 [\cf2 \cb3 mse\cf2 \cb3 ],\cf2 \cb3  \
+                           \cf2 \cb3 \},\cf2 \cb3 \
+                          index=\cf2 \cb3 [\cf2 \cb3 str_name\cf2 \cb3 ])\cf2 \cb3 \
+    \cf2 \cb3 return\cf2 \cb3  df_acc\
 \
-\pard\pardeftab720\sl380\partightenfactor0
-\cf2 \cb3 \strokec2 def\cf4 \strokec4  \cf5 \strokec5 ARIMA_forecast\cf4 \strokec4 (\cf6 \strokec6 serie_dates\cf4 \strokec4 , \cf6 \strokec6 serie\cf4 \strokec4 , \cf6 \strokec6 n_test\cf4 \strokec4 , \cf6 \strokec6 pq\cf4 \strokec4 , \cf6 \strokec6 d\cf4 \strokec4 )\cf7 \strokec7 :\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\sl380\partightenfactor0
-\cf4 \cb3   n_serie=\cf5 \strokec5 len\cf7 \strokec7 (\cf4 \strokec4 serie\cf7 \strokec7 )\cf4 \cb1 \strokec4 \
-\cb3   train_size = n_serie - n_test\cb1 \
-\cb3   train = serie.iloc\cf7 \strokec7 [:\cf4 \strokec4 train_size\cf7 \strokec7 ]\cf4 \cb1 \strokec4 \
-\cb3   test = serie.iloc\cf7 \strokec7 [\cf4 \strokec4 train_size\cf7 \strokec7 :\cf4 \strokec4 train_size + n_test\cf7 \strokec7 ]\cf4 \strokec4  \cb1 \
-\cb3   dates = serie_dates.iloc\cf7 \strokec7 [\cf4 \strokec4 train_size\cf7 \strokec7 :\cf4 \strokec4 train_size + n_test\cf7 \strokec7 ]\cf4 \cb1 \strokec4 \
-\cb3   best_aic = np.inf\cb1 \
-\cb3   best_bic = np.inf\cb1 \
-\cb3   best_order = \cf2 \strokec2 None\cf4 \cb1 \strokec4 \
-\cb3   best_mdl = \cf2 \strokec2 None\cf4 \cb1 \strokec4 \
-\cb3   pq_rng = \cf5 \strokec5 range\cf7 \strokec7 (\cf4 \strokec4 pq\cf7 \strokec7 )\cf4 \strokec4  \cf8 \strokec8 #resagos (autoregresivos)\cf4 \cb1 \strokec4 \
-\cb3   d_rng  = \cf5 \strokec5 range\cf7 \strokec7 (\cf4 \strokec4 d\cf7 \strokec7 )\cf4 \strokec4  \cf8 \strokec8 #restar maximo 3 veces (diferenciaci\'f3n)\cf4 \cb1 \strokec4 \
-\cb3   \cf11 \strokec11 for\cf4 \strokec4  i \cf12 \strokec12 in\cf4 \strokec4  pq_rng\cf7 \strokec7 :\cf4 \strokec4  \cf8 \strokec8 #autoregresivos\cf4 \cb1 \strokec4 \
-\cb3       \cf11 \strokec11 for\cf4 \strokec4  d \cf12 \strokec12 in\cf4 \strokec4  d_rng\cf7 \strokec7 :\cf4 \strokec4  \cf8 \strokec8 #diferenciaci\'f3n\cf4 \cb1 \strokec4 \
-\cb3           \cf11 \strokec11 for\cf4 \strokec4  j \cf12 \strokec12 in\cf4 \strokec4  pq_rng\cf7 \strokec7 :\cf4 \strokec4  \cf8 \strokec8 #medias moviles\cf4 \cb1 \strokec4 \
-\cb3               \cf11 \strokec11 try\cf7 \strokec7 :\cf4 \cb1 \strokec4 \
-\cb3                   tmp_mdl = sm.tsa.ARIMA\cf7 \strokec7 (\cf4 \strokec4 train\cf7 \strokec7 ,\cf4 \strokec4  order=\cf7 \strokec7 (\cf4 \strokec4 i\cf7 \strokec7 ,\cf4 \strokec4 d\cf7 \strokec7 ,\cf4 \strokec4 j\cf7 \strokec7 ))\cf4 \strokec4 .fit\cf7 \strokec7 (\cf4 \strokec4 method_kwargs=\cf7 \strokec7 \{\cf10 \strokec10 "warn_convergence"\cf7 \strokec7 :\cf4 \strokec4  \cf2 \strokec2 False\cf7 \strokec7 \})\cf4 \cb1 \strokec4 \
-\cb3                   tmp_aic = tmp_mdl.aic                \cb1 \
-\cb3                   \cf11 \strokec11 if\cf4 \strokec4  tmp_aic < best_aic\cf7 \strokec7 :\cf4 \strokec4  \cf8 \strokec8 #se busca aquel con menor AIC: The best-fit model according to AIC is the one that explains \cf4 \cb1 \strokec4 \
-\cb3                         \cf8 \strokec8 #the greatest amount of variation using the fewest possible independent variables.\cf4 \cb1 \strokec4 \
-\cb3                       best_aic = tmp_aic\cb1 \
-\cb3                       best_order = \cf7 \strokec7 (\cf4 \strokec4 i\cf7 \strokec7 ,\cf4 \strokec4  d\cf7 \strokec7 ,\cf4 \strokec4  j\cf7 \strokec7 )\cf4 \cb1 \strokec4 \
-\cb3                       best_mdl = tmp_mdl\cb1 \
-\cb3               \cf11 \strokec11 except\cf7 \strokec7 :\cf4 \strokec4  \cf11 \strokec11 continue\cf4 \cb1 \strokec4 \
-\cb3   model = sm.tsa.ARIMA\cf7 \strokec7 (\cf4 \strokec4 train\cf7 \strokec7 ,\cf4 \strokec4  order=best_order\cf7 \strokec7 )\cf4 \cb1 \strokec4 \
-\cb3   model_fit = model.fit\cf7 \strokec7 (\cf4 \strokec4 method_kwargs=\cf7 \strokec7 \{\cf10 \strokec10 "warn_convergence"\cf7 \strokec7 :\cf4 \strokec4  \cf2 \strokec2 False\cf7 \strokec7 \})\cf4 \cb1 \strokec4 \
-\cb3   \cf11 \strokec11 return\cf4 \strokec4  best_aic\cf7 \strokec7 ,\cf4 \strokec4  best_order\cf7 \strokec7 ,\cf4 \strokec4  model_fit\cf7 \strokec7 ,\cf4 \strokec4  train\cf7 \strokec7 ,\cf4 \strokec4  test\cf7 \strokec7 ,\cf4 \strokec4  dates\cb1 \
+\cf2 \cb3 def\cf2 \cb3  \cf2 \cb3 ARIMA_forecast\cf2 \cb3 (\cf2 \cb3 serie_dates\cf2 \cb3 , \cf2 \cb3 serie\cf2 \cb3 , \cf2 \cb3 n_test\cf2 \cb3 , \cf2 \cb3 pq\cf2 \cb3 , \cf2 \cb3 d\cf2 \cb3 )\cf2 \cb3 :\cf2 \cb3 \
+  n_serie=\cf2 \cb3 len\cf2 \cb3 (\cf2 \cb3 serie\cf2 \cb3 )\cf2 \cb3 \
+  train_size = n_serie - n_test\
+  train = serie.iloc\cf2 \cb3 [:\cf2 \cb3 train_size\cf2 \cb3 ]\cf2 \cb3 \
+  test = serie.iloc\cf2 \cb3 [\cf2 \cb3 train_size\cf2 \cb3 :\cf2 \cb3 train_size + n_test\cf2 \cb3 ]\cf2 \cb3  \
+  dates = serie_dates.iloc\cf2 \cb3 [\cf2 \cb3 train_size\cf2 \cb3 :\cf2 \cb3 train_size + n_test\cf2 \cb3 ]\cf2 \cb3 \
+  best_aic = np.inf\
+  best_bic = np.inf\
+  best_order = \cf2 \cb3 None\cf2 \cb3 \
+  best_mdl = \cf2 \cb3 None\cf2 \cb3 \
+  pq_rng = \cf2 \cb3 range\cf2 \cb3 (\cf2 \cb3 pq\cf2 \cb3 )\cf2 \cb3  \cf2 \cb3 #resagos (autoregresivos)\cf2 \cb3 \
+  d_rng  = \cf2 \cb3 range\cf2 \cb3 (\cf2 \cb3 d\cf2 \cb3 )\cf2 \cb3  \cf2 \cb3 #restar maximo 3 veces (diferenciaci\'f3n)\cf2 \cb3 \
+  \cf2 \cb3 for\cf2 \cb3  i \cf2 \cb3 in\cf2 \cb3  pq_rng\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 #autoregresivos\cf2 \cb3 \
+      \cf2 \cb3 for\cf2 \cb3  d \cf2 \cb3 in\cf2 \cb3  d_rng\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 #diferenciaci\'f3n\cf2 \cb3 \
+          \cf2 \cb3 for\cf2 \cb3  j \cf2 \cb3 in\cf2 \cb3  pq_rng\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 #medias moviles\cf2 \cb3 \
+              \cf2 \cb3 try\cf2 \cb3 :\cf2 \cb3 \
+                  tmp_mdl = sm.tsa.ARIMA\cf2 \cb3 (\cf2 \cb3 train\cf2 \cb3 ,\cf2 \cb3  order=\cf2 \cb3 (\cf2 \cb3 i\cf2 \cb3 ,\cf2 \cb3 d\cf2 \cb3 ,\cf2 \cb3 j\cf2 \cb3 ))\cf2 \cb3 .fit\cf2 \cb3 (\cf2 \cb3 method_kwargs=\cf2 \cb3 \{\cf2 \cb3 "warn_convergence"\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 False\cf2 \cb3 \})\cf2 \cb3 \
+                  tmp_aic = tmp_mdl.aic                \
+                  \cf2 \cb3 if\cf2 \cb3  tmp_aic < best_aic\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 #se busca aquel con menor AIC: The best-fit model according to AIC is the one that explains \cf2 \cb3 \
+                        \cf2 \cb3 #the greatest amount of variation using the fewest possible independent variables.\cf2 \cb3 \
+                      best_aic = tmp_aic\
+                      best_order = \cf2 \cb3 (\cf2 \cb3 i\cf2 \cb3 ,\cf2 \cb3  d\cf2 \cb3 ,\cf2 \cb3  j\cf2 \cb3 )\cf2 \cb3 \
+                      best_mdl = tmp_mdl\
+              \cf2 \cb3 except\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 continue\cf2 \cb3 \
+  model = sm.tsa.ARIMA\cf2 \cb3 (\cf2 \cb3 train\cf2 \cb3 ,\cf2 \cb3  order=best_order\cf2 \cb3 )\cf2 \cb3 \
+  model_fit = model.fit\cf2 \cb3 (\cf2 \cb3 method_kwargs=\cf2 \cb3 \{\cf2 \cb3 "warn_convergence"\cf2 \cb3 :\cf2 \cb3  \cf2 \cb3 False\cf2 \cb3 \})\cf2 \cb3 \
+  \cf2 \cb3 return\cf2 \cb3  best_aic\cf2 \cb3 ,\cf2 \cb3  best_order\cf2 \cb3 ,\cf2 \cb3  model_fit\cf2 \cb3 ,\cf2 \cb3  train\cf2 \cb3 ,\cf2 \cb3  test\cf2 \cb3 ,\cf2 \cb3  dates\
 \
-\pard\pardeftab720\sl380\partightenfactor0
-\cf13 \cb14 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 def\cf15  \cf16 arima_rolling\cf15 (\cf17 history\cf15 , \cf17 test\cf15 , \cf17 best_order\cf15 )\cf18 :\cf15 \cb1 \
-\cb14     predictions = \cf19 list\cf18 ()\cf15 \cb1 \
-\cb14     \cf20 for\cf15  t \cf21 in\cf15  \cf16 range\cf18 (\cf16 len\cf18 (\cf15 test\cf18 )):\cf15 \cb1 \
-\cb14         model_fit = sm.tsa.ARIMA\cf18 (\cf15 history\cf18 ,\cf15  order=best_order\cf18 )\cf15 .fit\cf18 (\cf15 method_kwargs=\cf18 \{\cf22 "warn_convergence"\cf18 :\cf15  \cf13 False\cf18 \})\cf15 \cb1 \
-\cb14         output = model_fit.forecast\cf18 ()\cf15  \cf23 #predicci\'f3n\cf15 \cb1 \
-\cb14         yhat = output\cf18 [\cf24 0\cf18 ]\cf15 \cb1 \
-\cb14         predictions.append\cf18 (\cf15 yhat\cf18 )\cf15 \cb1 \
-\cb14         obs = test\cf18 [\cf15 t\cf18 ]\cf15 \cb1 \
-\cb14         history.append\cf18 (\cf15 obs\cf18 )\cf15 \cb1 \
-\cb14         \cf16 print\cf18 (\cf22 'predicted=%f, expected=%f'\cf15  % \cf18 (\cf15 yhat\cf18 ,\cf15  obs\cf18 ))\cf15 \cb1 \
-\cb14     \cf20 return\cf15  predictions\cb1 \
+def arima_rolling(history, test, best_order):\
+    predictions = list()\
+    for t in range(len(test)):\
+        model_fit = sm.tsa.ARIMA(history, order=best_order).fit(method_kwargs=\{"warn_convergence": False\})\
+        output = model_fit.forecast() #predicci\'f3n\
+        yhat = output[0]\
+        predictions.append(yhat)\
+        obs = test[t]\
+        history.append(obs)\
+        print('predicted=%f, expected=%f' % (yhat, obs))\
+    return predictions\
 }
